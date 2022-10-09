@@ -30,3 +30,10 @@ SELECT * FROM employee_payroll_p;                           #Records From Table
 #UC-5 Ability to retrieve salary data for a particular employee
 SELECT salary FROM employee_payroll_p WHERE name = 'Sid'; #Selecting Sid entry
 WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
+
+#UC-6 Ability to add Gender to Employee Payroll Table and Update the Rows to reflect the correct Employee Gender
+ALTER TABLE employee_payroll_p ADD gender CHAR(1) AFTER Name;   #Add Gender Field
+UPDATE employee_payroll_p set gender ='M' where Name = 'Sid' or Name = 'Sidhodhan';
+UPDATE employee_payroll_p set gender ='F' where Name = 'Sakshi';
+
+
