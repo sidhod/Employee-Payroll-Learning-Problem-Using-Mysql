@@ -1,1 +1,9 @@
 *Welcome Employee Payroll Service*
+#Starting Mysql Query
+\sql
+\connect --mysql Sidhodhan@localhost:3306
+
+#UC-1 Ability to create a payroll service database
+CREATE DATABASE payroll_service;  #Create database
+SHOW DATABASES; #See all DataBases
+USE payroll_service; #To use payroll_service database
