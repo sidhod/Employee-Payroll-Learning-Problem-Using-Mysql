@@ -17,3 +17,9 @@ salary Double NOT NULL,                                      #salary of employee
 start Date NOT NULL,                                          #Employee start date
 PRIMARY KEY (id)                                                 #Make id Primary Key
 );
+
+#UC-3 Ability to create employee payroll data in the payroll service database as part of CRUD Operation
+ INSERT INTO employee_payroll_p (Name, salary, start) VALUES  #Insert Values in Table 
+('Sidhodhan',40000.00,'2022-10-09'),                                              #Employee 1 data
+ ('Sid',40000.00,'2022-08-09'),                                                       #Employee 2 data
+('Sakshi',70000.00,'2022-02-15');                                                   #Employee 3 data
