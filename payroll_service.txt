@@ -36,4 +36,10 @@ ALTER TABLE employee_payroll_p ADD gender CHAR(1) AFTER Name;   #Add Gender Fiel
 UPDATE employee_payroll_p set gender ='M' where Name = 'Sid' or Name = 'Sidhodhan';
 UPDATE employee_payroll_p set gender ='F' where Name = 'Sakshi';
 
+#UC-7 Ability to find sum, average, min, max and number of male and female employees
+SELECT SUM(salary) FROM employee_payroll_p WHERE gender = 'F' GROUP BY gender;   
+SELECT AVG(salary) FROM employee_payroll_p WHERE gender = 'F' GROUP BY gender;
+SELECT MIN(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
+SELECT MAX(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
+
 
