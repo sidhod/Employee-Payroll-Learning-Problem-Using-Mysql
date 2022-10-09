@@ -23,3 +23,6 @@ PRIMARY KEY (id)                                                 #Make id Primar
 ('Sidhodhan',40000.00,'2022-10-09'),                                              #Employee 1 data
  ('Sid',40000.00,'2022-08-09'),                                                       #Employee 2 data
 ('Sakshi',70000.00,'2022-02-15');                                                   #Employee 3 data
+
+#UC-4 Ability to retrieve all the employee payroll data that is added to payroll service database
+SELECT * FROM employee_payroll_p;                           #Records From Table
