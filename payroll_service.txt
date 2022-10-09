@@ -4,6 +4,16 @@
 \connect --mysql Sidhodhan@localhost:3306
 
 #UC-1 Ability to create a payroll service database
-CREATE DATABASE payroll_service;  #Create database
-SHOW DATABASES; #See all DataBases
-USE payroll_service; #To use payroll_service database
+CREATE DATABASE payroll_service;           #Create database
+SHOW DATABASES;                                  #See all DataBases
+USE payroll_service;                                    #To use payroll_service database
+
+#UC-2 Ability to create a employee payroll table in the payroll service database to manage employee payrolls
+ CREATE TABLE employee_payroll_p                      #Create Table
+( 
+id INT unsigned NOT NULL AUTO_INCREMENT,  #Unique Id for the record
+Name VARCHAR(150) NOT NULL,                          #Name of employee
+salary Double NOT NULL,                                      #salary of employee
+start Date NOT NULL,                                          #Employee start date
+PRIMARY KEY (id)                                                 #Make id Primary Key
+);
