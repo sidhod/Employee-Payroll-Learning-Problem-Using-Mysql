@@ -26,3 +26,7 @@ PRIMARY KEY (id)                                                 #Make id Primar
 
 #UC-4 Ability to retrieve all the employee payroll data that is added to payroll service database
 SELECT * FROM employee_payroll_p;                           #Records From Table
+
+#UC-5 Ability to retrieve salary data for a particular employee
+SELECT salary FROM employee_payroll_p WHERE name = 'Sid'; #Selecting Sid entry
+WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
