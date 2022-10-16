@@ -48,6 +48,14 @@ ALTER TABLE employee_payroll_p ADD address VARCHAR(250) AFTER phone_number;     
 ALTER TABLE employee_payroll_p ADD deparment VARCHAR(250) NOT NULL AFTER address; # Add deparment field
 ALTER TABLE employee_payroll_p ALTER address SET DEFAULT 'TBD';                                    #set default value
 
+#UC-9
+ALTER TABLE employee_payroll_p RENAME COLUMN salary TO basic_pay;                                #change column name 
+ALTER TABLE employee_payroll_p ADD deductions double NOT NULL AFTER basic_pay;           # add deductions field
+ALTER TABLE employee_payroll_p ADD texable_pay double NOT NULL AFTER deductions;       #add texable pay field
+ALTER TABLE employee_payroll_p ADD tax double NOT NULL AFTER texable_pay;                  #add tax field
+ALTER TABLE employee_payroll_p ADD net_pay double NOT NULL AFTER tax;                        #add net pay field
+
+
 
 
 
