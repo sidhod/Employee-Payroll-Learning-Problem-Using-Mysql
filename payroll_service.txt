@@ -42,4 +42,14 @@ SELECT AVG(salary) FROM employee_payroll_p WHERE gender = 'F' GROUP BY gender;
 SELECT MIN(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
 SELECT MAX(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
 
+#UC-8 
+ALTER TABLE employee_payroll_p ADD phone_number VARCHAR(250) AFTER name;                  #Add phone number field
+ALTER TABLE employee_payroll_p ADD address VARCHAR(250) AFTER phone_number;             #Add address field
+ALTER TABLE employee_payroll_p ADD deparment VARCHAR(250) NOT NULL AFTER address; # Add deparment field
+ALTER TABLE employee_payroll_p ALTER address SET DEFAULT 'TBD';                                    #set default value
+
+
+
+
+
 
