@@ -55,6 +55,23 @@ ALTER TABLE employee_payroll_p ADD texable_pay double NOT NULL AFTER deductions;
 ALTER TABLE employee_payroll_p ADD tax double NOT NULL AFTER texable_pay;                  #add tax field
 ALTER TABLE employee_payroll_p ADD net_pay double NOT NULL AFTER tax;                        #add net pay field
 
+#UC-10
+INSERT INTO employee_payroll_p (Name, basic_pay, start,deparment,deductions,texable_pay,tax,net_pay) VALUES ('Terisa',100000.00,'2018-03-20','Marketting',20000,10000,30000,70000);
+
+--Check Field composite/multivalue/simple
+id- key
+name- Simple attribute
+phone number- Multivalue
+address- Composite 
+department- Simple attribute
+gender- Simple attribute
+start- Simple attribute
+basic pay- Simple attribute
+deductions- Simple attribute
+taxable pay- Derived
+tax - Simple attribute
+net pay- Derived
+
 
 
 
