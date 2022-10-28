@@ -29,7 +29,7 @@ SELECT * FROM employee_payroll_p;                           #Records From Table
 
 #UC-5 Ability to retrieve salary data for a particular employee
 SELECT salary FROM employee_payroll_p WHERE name = 'Sid'; #Selecting Sid entry
-WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
+select * from employee_payroll_p WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
 
 #UC-6 Ability to add Gender to Employee Payroll Table and Update the Rows to reflect the correct Employee Gender
 ALTER TABLE employee_payroll_p ADD gender CHAR(1) AFTER Name;   #Add Gender Field
@@ -72,7 +72,15 @@ taxable pay- Derived
 tax - Simple attribute
 net pay- Derived
 
-
+#UC-11 Implement the ER Diagram into Payroll Service DB
+create table Department(ID int not null primary key, Department varchar(255)); 		#Create Table Deparment
+insert into department values(1, "Marketting"), (2, "Sells"), (3, "Devloper"), (4, "Product");     #Insert Values 
+select * from department;
+describe department;
+#Create employee_deparment Table 
+create table employee_department(Dept_ID int not null , Department varchar(255), EMP_ID int unsigned, Name varchar(255), FOREIGN KEY(EMP_ID) REFERENCES employee_payroll_p(id), FOREIGN KEY(Dept_ID) REFERENCES department(ID));
+insert into employee_department values(1, "Marketting", 1, "Sid"),(2,"Sells", 2, "Sidhodhan"),(3, "Devloper", 3,"Bill" ), (4, "Marketting", 4, "terisa");
+describe employee_department;
 
 
 
