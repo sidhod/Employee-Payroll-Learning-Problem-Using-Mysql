@@ -82,7 +82,14 @@ create table employee_department(Dept_ID int not null , Department varchar(255),
 insert into employee_department values(1, "Marketting", 1, "Sid"),(2,"Sells", 2, "Sidhodhan"),(3, "Devloper", 3,"Bill" ), (4, "Marketting", 4, "terisa");
 describe employee_department;
 
-
+#UC-4 Ensure all retrieve queries done especially in UC 4, UC 5 and UC 7 are working with new table structure
+SELECT * FROM employee_payroll_p;                           #Records From Table
+SELECT basic_pay FROM employee_payroll_p WHERE name = 'Sid'; #Selecting Sid entry
+SELECT * FROM employee_payroll_p WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
+SELECT SUM(salary) FROM employee_payroll_p WHERE gender = 'F' GROUP BY gender;   
+SELECT AVG(salary) FROM employee_payroll_p WHERE gender = 'F' GROUP BY gender;
+SELECT MIN(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
+SELECT MAX(salary) FROM employee_payroll_p WHERE gender = 'M' GROUP BY gender;
 
 
 
